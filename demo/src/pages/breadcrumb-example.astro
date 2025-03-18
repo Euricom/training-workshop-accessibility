@@ -1,0 +1,17 @@
+---
+import Layout from '@/layouts/main-layout.astro'
+import { Breadcrumb } from '@/components/breadcrumb'
+import { Card } from '@/components/card'
+
+const items = [
+  { href: '#home', label: 'Home' },
+  { href: '#examples', label: 'Examples' },
+  { href: '#breadcrumb-example', label: 'Breadcrumb Example' }
+]
+---
+
+<Layout>
+  <Card>
+    <Breadcrumb {items} />
+  </Card>
+</Layout>

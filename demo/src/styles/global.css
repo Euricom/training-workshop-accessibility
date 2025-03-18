@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+
+  --color-shark-50: #f6f8f9;
+  --color-shark-100: #ebeff3;
+  --color-shark-200: #d3dce4;
+  --color-shark-300: #acbecd;
+  --color-shark-400: #7f9ab1;
+  --color-shark-500: #5f7e98;
+  --color-shark-600: #4b667e;
+  --color-shark-700: #3e5366;
+  --color-shark-800: #364756;
+  --color-shark-900: #303d4a;
+  --color-shark-950: #1d242c;
+
+  --color-euricom-50: #e7ffe4;
+  --color-euricom-100: #c9ffc4;
+  --color-euricom-200: #98ff90;
+  --color-euricom-300: #56ff50;
+  --color-euricom-400: #00ff00;
+  --color-euricom-500: #00e606;
+  --color-euricom-600: #00b809;
+  --color-euricom-700: #008b07;
+  --color-euricom-800: #076d0d;
+  --color-euricom-900: #0b5c11;
+  --color-euricom-950: #003406;
+}
+
+@custom-variant aria-current-page (&[aria-current="page"]);

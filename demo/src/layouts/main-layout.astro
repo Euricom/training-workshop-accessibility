@@ -1,0 +1,50 @@
+---
+import { ClientRouter } from 'astro:transitions'
+import background from '../assets/background.svg'
+import Logo from '../assets/logo.svg'
+import '../styles/global.css'
+---
+
+<!doctype html>
+<html lang="en" class="size-full font-montserrat text-white">
+  <head>
+    <ClientRouter />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Euricom — a11y Examples</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="size-full bg-shark-950">
+    <img
+      class="fixed top-0 left-0 -z-10 h-full w-full blur-[100px] filter"
+      src={background.src}
+      fetchpriority="high"
+      role="presentation"
+      alt=""
+    />
+    <div class="flex size-full flex-col">
+      <header class="m-auto w-full max-w-[1586px] p-6">
+        <nav>
+          <a href="/" aria-label="Home">
+            <Logo width="10rem" />
+          </a>
+        </nav>
+      </header>
+
+      <main class="flex flex-auto items-center justify-center">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style></style>
