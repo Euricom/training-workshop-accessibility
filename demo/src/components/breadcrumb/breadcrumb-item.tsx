@@ -22,7 +22,10 @@ export const BreadcrumbItem = (props: Props) => {
             {children}
           </span>
         ) : (
-          <a href={href} className="hover:text-white hover:underline">
+          <a
+            href={href}
+            className="rounded-xs hover:text-white hover:underline focus-visible:outline-1 focus-visible:outline-euricom-400"
+          >
             {children}
           </a>
         )}
