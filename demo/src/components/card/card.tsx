@@ -1,3 +1,6 @@
+import { Link } from "./link";
+import { Title } from "./title";
+
 type Props = {
   children: React.ReactNode;
 };
@@ -11,3 +14,6 @@ export const Card = (props: Props) => {
     </section>
   );
 };
+
+Card.Title = Title;
+Card.Link = Link;

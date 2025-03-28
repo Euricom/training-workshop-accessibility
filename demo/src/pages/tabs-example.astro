@@ -1,0 +1,62 @@
+---
+import { Card } from "@/components/card";
+import { TabList } from "@/components/tab-list";
+import { TabPanel } from "@/components/tab-panel";
+import MainLayout from "@/layouts/main-layout.astro";
+
+const items = [
+  { label: "Salamanders" },
+  { label: "Ultramarines" },
+  { label: "Space Wolves" },
+  { label: "Blood Angels" },
+];
+---
+
+<MainLayout>
+  <div class="w-2xl">
+    <Card>
+      <TabList client:load title="Space marine chapters" {items} />
+      <TabPanel client:load label={items[0].label}>
+        <p>
+          The Salamanders are a technically-adept Chapter with a preference for
+          short-ranged combat, heat-based weaponry like melta guns, and
+          energized warhammers. They are unusually devoted to the welfare of the
+          civilian population of the Imperium because of their own close
+          connections to the people of their homeworld of Nocturne.
+        </p>
+      </TabPanel>
+      <TabPanel client:load label={items[1].label}>
+        <p>
+          The Ultramarines Chapter is known as the model for all Space Marines
+          due to their exemplary discipline and loyalty to the Emperor of
+          Mankind. As the largest Legion at the time of the Second Founding they
+          produced the largest number of Second Founding Chapters. This
+          Chapter's elite 1st Company was wiped out by the Tyranids during the
+          legendary Battle for Macragge of the First Tyrannic War; it has taken
+          a century to fully reconstitute that company.
+        </p>
+      </TabPanel>
+      <TabPanel client:load label={items[2].label}>
+        <p>
+          This particular Chapter is known for following its own path and being
+          highly unorthodox in organization and tactics - often contrary to the
+          Codex Astartes. They are feral in appearance and are often adorned
+          with wolf pelts and wolf tooth necklaces. They are one of the few
+          Space Marine Chapters who do not follow any of the rules for Chaoter
+          organization set out in the Codex.
+        </p>
+      </TabPanel>
+      <TabPanel client:load label={items[3].label}>
+        <p>
+          The Blood Angels suffer from the Black Rage and the Red Thirst, those
+          that succumb to the Black Rage and the Red Thirst are put into the
+          specially-created Death Company as the crazed battle-brother sees only
+          the last moments of his Primarch Sanguinius' death at the hands of
+          Horus and enters a killing frenzy during which he will literally drink
+          the blood of his foes. The Blood Angels prefer the usage of jump packs
+          and close combat.
+        </p>
+      </TabPanel>
+    </Card>
+  </div>
+</MainLayout>

@@ -1,20 +1,25 @@
 ---
-import { Card } from '@/components/card'
-import Layout from '@/layouts/main-layout.astro'
+import { Card } from "@/components/card";
+import Layout from "@/layouts/main-layout.astro";
 ---
 
 <Layout>
-  <Card>
-    <h2 class="mb-2 text-xl font-medium">Breadcrumb</h2>
-    <p>
-      A breadcrumb trail consists of a list of links to the parent pages of the
-      current page in hierarchical order.
-    </p>
-    <a
-      href="/breadcrumb-example"
-      class="text-euricom-400 hover:underline active:text-euricom-200"
-    >
-      View example »
-    </a>
-  </Card>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <Card>
+      <Card.Title>Breadcrumb</Card.Title>
+      <p>
+        A breadcrumb trail consists of a list of links to the parent pages of
+        the current page in hierarchical order.
+      </p>
+      <Card.Link href="/breadcrumb-example" />
+    </Card>
+    <Card>
+      <Card.Title>Tabs</Card.Title>
+      <p>
+        Tabs are a set of layered sections of content—known as tab panels, that
+        display one panel of content at a time.
+      </p>
+      <Card.Link href="/tabs-example"> View example » </Card.Link>
+    </Card>
+  </div>
 </Layout>
